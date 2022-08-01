@@ -7,6 +7,9 @@ import java.time.LocalDate;
 
 @Entity
 public class Pet extends BaseEntity{
+    @Embedded
+    private Picture picture;
+
     private String name;
     private PetType petType;
     @Enumerated(EnumType.STRING)
