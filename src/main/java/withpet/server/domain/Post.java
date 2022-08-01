@@ -5,16 +5,19 @@ import withpet.server.enums.ServiceType;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Entity
 public class Post extends BaseEntity{
+
+    @ElementCollection
+    private List<Picture> pictureList = new ArrayList<>();
+
     @Enumerated(EnumType.STRING)
     private ServiceType serviceType;
-//    @ElementCollection
-//    @Builder.Default
-//    private Map<ServiceDetail> serviceDetails = new HashMap();
+
+    @ManyToMany
+    private Set<ServiceDetail> serviceDetails = new HashSet<>();
 
     private LocalDate startTime;
     private LocalDate endTime;
