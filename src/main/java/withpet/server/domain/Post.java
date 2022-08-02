@@ -31,4 +31,6 @@ public class Post extends BaseEntity{
     @ManyToOne
     private User user;
 
+    @Embedded
+    private Address address;
 }

@@ -1,0 +1,18 @@
+�[� config] MySQL -> H2
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Mon Aug 1 01:12:27 2022 +0900
+#
+# interactive rebase in progress; onto 59978f5
+# Last command done (1 command done):
+#    reword b2cf579 [:wrench: config] MySQL -> H2
+# Next command to do (1 remaining command):
+#    pick 3fb2ec2 [✨ feat] entity 추가
+# You are currently editing a commit while rebasing branch 'yh/entity' on '59978f5'.
+#
+# Changes to be committed:
+#	modified:   build.gradle
+#	modified:   src/main/resources/application.yml
+#

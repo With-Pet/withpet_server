@@ -21,7 +21,11 @@ public class User extends BaseEntity{
     private String introduction;
 
     @Embedded
+    private Address address;
+
+    @Embedded
     private Picture picture;
+
 
     @OneToMany(mappedBy = "user")
     private List<Post> posts;
