@@ -18,6 +18,18 @@ spring:
         #show_sql: true Output from systemout / In a production environment, logs should be taken through a logger
         format_sql: true
 
+
+#cloud:
+#  aws:
+#    s3:
+#      bucket: withpet-s3
+#    region:
+#      static: ap-northeast-2
+#    stack:
+#      auto: false
+#    credentials:
+#      instanceProfile: true
+
 logging:
   level:
     org.hibernate.SQL: debug  #You can see all the sql that hibernate produces. Output via logger
