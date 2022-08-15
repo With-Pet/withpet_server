@@ -1,0 +1,11 @@
+# [gitmoji type]: title
+# breaking line
+# body
+
+#######################
+# <<gitmoji type>>
+# :wrench:   -> config
+# ✨         -> feature
+# :recycle:  -> refactor
+# :bug:      -> bug fix
+#######################
