@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import withpet.server.common.base.BaseResponseStatus;
+
 import withpet.server.common.base.BaseRuntimeException;
 import withpet.server.pet.entity.PetMapper;
 import withpet.server.pet.dto.PetSaveForm;
@@ -28,7 +29,6 @@ public class PetService {
             // 펫 사진 업로드
             upload();
         }catch (Exception e){
-            e.printStackTrace();
             throw new BaseRuntimeException(BaseResponseStatus.FAIL_REGISTER_PET);
         }
     }
