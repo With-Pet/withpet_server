@@ -22,6 +22,7 @@ public enum BaseResponseStatus {
     DUPLICATE_NICKNAME(false,404,"중복된 닉네임입니다"),
     JOIN_USER(false,405,"회원가입을 진행해주세요"),
 
+
     /**
      * 500: RESPONSE 오류
      */
