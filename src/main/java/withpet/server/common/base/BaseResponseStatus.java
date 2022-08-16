@@ -26,6 +26,7 @@ public enum BaseResponseStatus {
     FAIL_REGISTER_PET(false,406,"펫 등록을 실패하였습니다"),
 >>>>>>> Stashed changes
 
+
     /**
      * 500: RESPONSE 오류
      */

@@ -24,6 +24,13 @@ public class BaseResponse<T>{
     private List<T> results;
 
     //요청에 성공한 경우
+    public BaseResponse(){
+        this.isSuccess=SUCCESS.isSuccess();
+        this.message=SUCCESS.getMessage();
+        this.code=SUCCESS.getCode();
+    }
+
+    //단건 요청에 성공한 경우
     public BaseResponse(T result){
         this.isSuccess=SUCCESS.isSuccess();
         this.message=SUCCESS.getMessage();
