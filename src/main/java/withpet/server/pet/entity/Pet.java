@@ -11,15 +11,16 @@ import withpet.server.user.entity.CommonDateEntity;
 import withpet.server.user.entity.User;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
-@ToString(of = {"petId", "name", "birth", "type", "kind", "notes", "weight", "isNeutralization", "sex"})
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "pet")
+@Builder
+@AllArgsConstructor
 public class Pet extends CommonDateEntity {
 
     @Id
@@ -45,13 +46,13 @@ public class Pet extends CommonDateEntity {
     private PetSex sex;     //펫 성별
 
     @Column(nullable = false)
-    private Boolean isNeutralization;   //중성화 여부
+    private Boolean isNeutered;   //중성화 여부
 
     @Column(nullable = false)
     private int weight;    //펫 몸무게
 
     @Column(nullable = false)
-    private LocalDateTime birth;    //펫 생일
+    private LocalDate birth;    //펫 생일
 
     @Column(nullable = false)
     private String notes;   //특이사항 및 참고사항
@@ -63,6 +64,24 @@ public class Pet extends CommonDateEntity {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "pet") //post 에있는 owner 필드에 의해 매핑이 되어 있다.
+    @Builder.Default
     private List<Post> posts = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "petId=" + petId +
+                ", picture=" + picture +
+                ", name='" + name + '\'' +
+                ", type=" + type +
+                ", kind='" + kind + '\'' +
+                ", sex=" + sex +
+                ", isNeutered=" + isNeutered +
+                ", weight=" + weight +
+                ", birth=" + birth +
+                ", notes='" + notes + '\'' +
+                ", owner=" + owner +
+                ", posts=" + posts +
+                '}';
+    }
 }
