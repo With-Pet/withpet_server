@@ -1,7 +1,6 @@
 package withpet.server.pet.dto;
 
 import lombok.*;
-import withpet.server.pet.entity.Pet;
 import withpet.server.pet.entity.enumTypes.PetSex;
 import withpet.server.pet.entity.enumTypes.PetType;
 

@@ -21,7 +21,7 @@ import java.util.List;
 @Entity
 @Getter
 @Builder
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @ToString(of = {"userId", "snsId", "nickname", "snsType", "address", "x", "y", "countWalk", "countCaring", "countExperience", "introduction", "fcmToken"})
 @Table(name = "user")

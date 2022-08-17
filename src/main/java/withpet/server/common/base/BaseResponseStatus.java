@@ -21,7 +21,8 @@ public enum BaseResponseStatus {
     POST_INVALID_NICKNAME(false,403,"닉네임 형식이 올바르지 않습니다"),
     DUPLICATE_NICKNAME(false,404,"중복된 닉네임입니다"),
     JOIN_USER(false,405,"회원가입을 진행해주세요"),
-    FAIL_REGISTER_PET(false,406,"펫 등록을 실패하였습니다"),
+    FAIL_REGISTER(false,406,"등록을 실패하였습니다"),
+    FAIL_FIND(false,407,"조회에 실패하였습니다."),
 
 
     /**
