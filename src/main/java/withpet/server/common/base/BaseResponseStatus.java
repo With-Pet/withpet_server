@@ -23,7 +23,7 @@ public enum BaseResponseStatus {
     JOIN_USER(false,405,"회원가입을 진행해주세요"),
     FAIL_REGISTER(false,406,"등록을 실패하였습니다"),
     FAIL_FIND(false,407,"조회에 실패하였습니다."),
-
+    FAIL_DELETE(false, 408, "삭제에 실패하였습니다."),
 
     /**
      * 500: RESPONSE 오류

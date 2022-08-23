@@ -61,17 +61,27 @@ public class PetService {
 
             return detail;
         }catch (Exception e){
-//            e.printStackTrace();
+            e.printStackTrace();
             throw new BaseRuntimeException(BaseResponseStatus.FAIL_FIND);
         }
     }
 
+    // TODO: 2022-08-23
     public void updatePet(Long id, PetSaveForm petSaveForm) {
         try {
 
         }catch (Exception e){
             e.printStackTrace();
             throw new BaseRuntimeException(BaseResponseStatus.FAIL_REGISTER);
+        }
+    }
+
+    public void delete(Long id) {
+        try{
+            petRepository.deleteById(id);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BaseRuntimeException(BaseResponseStatus.FAIL_DELETE);
         }
     }
 }

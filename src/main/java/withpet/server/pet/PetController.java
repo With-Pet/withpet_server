@@ -28,6 +28,13 @@ public class PetController {
         return new BaseResponse();
     }
 
+    // 펫 삭제(2.3)
+    @PostMapping("/delete/{id}")
+    public BaseResponse delete(@PathVariable Long id){
+        petService.delete(id);
+        return new BaseResponse();
+    }
+
 
     // 펫 상세 조회(2.5)
     @GetMapping("/{id}")
