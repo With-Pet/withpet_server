@@ -15,6 +15,7 @@ import withpet.server.pet.dto.PetMapper;
 import withpet.server.pet.repository.PetRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Data
 @Slf4j
@@ -82,6 +83,16 @@ public class PetService {
         }catch (Exception e){
             e.printStackTrace();
             throw new BaseRuntimeException(BaseResponseStatus.FAIL_DELETE);
+        }
+    }
+
+    // TODO: 2022-08-23 에러코드 작성(BaseResponseStatus)
+    public List<PetDetail> getMyPetList(Long id) {
+        try{
+            return petRepository.findByOwner(id);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BaseRuntimeException(BaseResponseStatus.FAIL_FIND);
         }
     }
 }
