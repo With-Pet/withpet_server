@@ -3,6 +3,7 @@ package withpet.server.pet;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import withpet.server.common.base.BaseResponseStatus;
 
@@ -10,7 +11,7 @@ import withpet.server.common.base.BaseRuntimeException;
 import withpet.server.pet.dto.PetDetail;
 import withpet.server.pet.dto.PetSaveForm;
 import withpet.server.pet.entity.Pet;
-import withpet.server.pet.entity.PetMapper;
+import withpet.server.pet.dto.PetMapper;
 import withpet.server.pet.repository.PetRepository;
 
 import javax.transaction.Transactional;
@@ -24,6 +25,11 @@ public class PetService {
     private final PetRepository petRepository;
     // 테스트 코드 실행할 때는 final 키워드 지우기 -> petMapper 직접 setting
     private PetMapper petMapper;
+
+    @Autowired
+    public void setPetMapper(PetMapper petMapper){
+        this.petMapper=petMapper;
+    }
 
     // TODO: 2022-08-16 pet 프로필 사진 업로드
     public void registerPet(PetSaveForm petSaveForm) {
@@ -59,7 +65,13 @@ public class PetService {
             throw new BaseRuntimeException(BaseResponseStatus.FAIL_FIND);
         }
     }
-    public void setPetMapper(PetMapper petMapper){
-        this.petMapper=petMapper;
+
+    public void updatePet(Long id, PetSaveForm petSaveForm) {
+        try {
+
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BaseRuntimeException(BaseResponseStatus.FAIL_REGISTER);
+        }
     }
 }

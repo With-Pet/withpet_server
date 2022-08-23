@@ -1,8 +1,9 @@
-package withpet.server.pet.entity;
+package withpet.server.pet.dto;
 
 import org.mapstruct.Mapper;
 import withpet.server.pet.dto.PetDetail;
 import withpet.server.pet.dto.PetSaveForm;
+import withpet.server.pet.entity.Pet;
 
 @Mapper(componentModel = "spring")
 public interface PetMapper {

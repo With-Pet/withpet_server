@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import withpet.server.common.embeddable.Picture;
 import withpet.server.pet.dto.PetDetail;
+import withpet.server.pet.dto.PetMapper;
 import withpet.server.pet.dto.PetSaveForm;
 import withpet.server.pet.entity.enumTypes.PetSex;
 import withpet.server.pet.entity.enumTypes.PetType;

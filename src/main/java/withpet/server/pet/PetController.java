@@ -20,6 +20,14 @@ public class PetController {
         return new BaseResponse();
     }
 
+    // 펫 수정(2.2)
+    // TODO: 2022-08-16 validation 추가
+    // TODO: 2022-08-23 parameter 변경 -> 각 필드의 수정 여부 포함하도록
+    @PostMapping("/update")
+    public BaseResponse update(@RequestParam Long id, @RequestBody PetSaveForm petSaveForm){
+        return new BaseResponse();
+    }
+
 
     // 펫 상세 조회(2.5)
     @GetMapping("/{id}")
