@@ -32,10 +32,10 @@ public class Post extends CommonDateEntity {
     private String title;   //게시물 제목
 
     @Column(nullable = false)
-    private LocalDateTime startDate;   //시작 날짜
+    private LocalDateTime startTime;   //시작 날짜
 
     @Column(nullable = false)
-    private LocalDateTime endDate;    //종료 날짜
+    private LocalDateTime endTime;    //종료 날짜
 
     @ElementCollection
     private List<Picture> pictureList = new ArrayList<>();
