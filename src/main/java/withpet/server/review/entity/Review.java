@@ -32,7 +32,7 @@ public class Review extends CommonDateEntity {
     private Post post;     //게시물 정보
 
     @Column(nullable = false)
-    private int rate;  //리뷰 별점
+    private int stars;  //리뷰 별점
 
     @Column(nullable = false)
     private String content; //리뷰 내용
@@ -45,6 +45,6 @@ public class Review extends CommonDateEntity {
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", updatable = false, insertable = false)
-    private User user;     //작성자 정보
+    private User writer;     //작성자 정보
 
 }

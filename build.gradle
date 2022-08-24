@@ -39,6 +39,10 @@ dependencies {
 
 	//modelmapper
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
+
+	//mapstruct
+	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 }
 
 tasks.named('test') {
