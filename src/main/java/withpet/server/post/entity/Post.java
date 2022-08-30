@@ -17,9 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter
-@ToString(of = {"postId", "title", "startDate", "endDate", "serviceType", "price", "specifics", "description", "address", "x", "y"})
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Data
+@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 @Table(name = "post")
 public class Post extends CommonDateEntity {
 
@@ -38,7 +39,7 @@ public class Post extends CommonDateEntity {
     private LocalDateTime endTime;    //종료 날짜
 
     @ElementCollection
-    private List<Picture> pictureList = new ArrayList<>();
+    private List<String> pictureUrls = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
