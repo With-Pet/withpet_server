@@ -18,7 +18,7 @@ public interface PetMapper {
                 .kind(pet.getKind())
                 .notes(pet.getNotes())
                 .ownerId(pet.getOwner().getUserId())
-                .profile(pet.getPicture().getFileName()) ////
+                .profile(pet.getProfileUrl())
                 .sex(pet.getSex())
                 .type(pet.getType())
                 .weight(pet.getWeight())

@@ -31,7 +31,7 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 
 	//AWS S3
-//	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.5.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.5.RELEASE'
 
 	//Swagger
 	implementation 'io.springfox:springfox-swagger2:3.0.0'

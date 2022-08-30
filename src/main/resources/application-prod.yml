@@ -1,3 +1,4 @@
+# jpa
 spring:
   mvc:
     pathmatch:
@@ -18,6 +19,7 @@ spring:
         #show_sql: true Output from systemout / In a production environment, logs should be taken through a logger
         format_sql: true
 
+# s3
 cloud:
   aws:
     s3:

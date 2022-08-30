@@ -28,8 +28,8 @@ public class Pet extends CommonDateEntity {
     @Column(nullable = false, unique = true)
     private Long petId;    //펫 고유번호
 
-    @Embedded
-    private Picture picture;
+
+    private String profileUrl;
 
     @Column(nullable = false)
     private String name;    //펫 이름
@@ -67,21 +67,5 @@ public class Pet extends CommonDateEntity {
     @Builder.Default
     private List<Post> posts = new ArrayList<>();
 
-    @Override
-    public String toString() {
-        return "Pet{" +
-                "petId=" + petId +
-                ", picture=" + picture +
-                ", name='" + name + '\'' +
-                ", type=" + type +
-                ", kind='" + kind + '\'' +
-                ", sex=" + sex +
-                ", isNeutered=" + isNeutered +
-                ", weight=" + weight +
-                ", birth=" + birth +
-                ", notes='" + notes + '\'' +
-                ", owner=" + owner +
-                ", posts=" + posts +
-                '}';
-    }
+
 }
