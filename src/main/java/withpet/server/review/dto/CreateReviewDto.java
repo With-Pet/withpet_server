@@ -12,9 +12,10 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ReviewSaveForm {
+public class CreateReviewDto {
     private Long postId;
     private int stars;
-    private String comments;
+    private String content;
     private List<MultipartFile> pictureList;
+    private Long targetUserId;
 }

@@ -12,11 +12,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Table(name = "certificate")
 @Entity
 @Getter
+@Builder
 @ToString(of = {"reviewId", "content"})
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "certificate")
+@AllArgsConstructor
 public class Review extends CommonDateEntity {
 
     @Id
@@ -25,7 +27,7 @@ public class Review extends CommonDateEntity {
     private Long reviewId;  //리뷰 고유번호
 
     @ElementCollection
-    private List<Picture> pictureList = new ArrayList<>();
+    private List<String> pictureList = new ArrayList<>();
 
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
