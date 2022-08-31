@@ -41,8 +41,7 @@ public class User extends CommonDateEntity {
     @Column(nullable = false, unique = true)
     private String snsId;     //회원 아이디, 모두 SNS 계정 이므로 ID = EMAIL
 
-//    @Embedded
-//    private Picture picture;
+    private String profile;
 
     @Column(nullable = false)
     private Address address;  //회원 주소

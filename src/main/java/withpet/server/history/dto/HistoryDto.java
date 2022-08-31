@@ -1,13 +1,16 @@
 package withpet.server.history.dto;
 
+import lombok.AllArgsConstructor;
 import withpet.server.history.entity.enumTypes.Status;
 import withpet.server.location.entity.Location;
 import withpet.server.post.entity.enumTypes.ServiceType;
 
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
 public class HistoryDto {
-    private Location location;
+    private Long historyId;
+    private String address;
     private ServiceType serviceType;
 
     // 서비스 제공자
